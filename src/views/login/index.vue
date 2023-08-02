@@ -17,7 +17,7 @@
           :rules="rules"
         >
           <n-form-item path="username">
-            <n-input v-model:value="formInline.username" placeholder="请输入用户名">
+            <n-input v-model:value="formInline.username" placeholder="กรุณากรอกชื่อผู้ใช้">
               <template #prefix>
                 <n-icon size="18" color="#808695">
                   <PersonOutline />
@@ -30,7 +30,7 @@
               v-model:value="formInline.password"
               type="password"
               showPasswordOn="click"
-              placeholder="กรุณาใส่รหัสผ่าน"
+              placeholder="กรุณากรอกรหัสผ่าน"
             >
               <template #prefix>
                 <n-icon size="18" color="#808695">
@@ -42,22 +42,22 @@
           <n-form-item class="default-color">
             <div class="flex justify-between">
               <div class="flex-initial">
-                <n-checkbox v-model:checked="autoLogin">自动登录</n-checkbox>
+                <n-checkbox v-model:checked="autoLogin">เข้าสู่ระบบอัตโนมัติ</n-checkbox>
               </div>
               <div class="flex-initial order-last">
-                <a href="javascript:">忘记密码</a>
+                <a href="javascript:">ลืมรหัสผ่าน</a>
               </div>
             </div>
           </n-form-item>
           <n-form-item>
             <n-button type="primary" @click="handleSubmit" size="large" :loading="loading" block>
-              登录
+              เข้าสู่ระบบ
             </n-button>
           </n-form-item>
           <n-form-item class="default-color">
             <div class="flex view-account-other">
               <div class="flex-initial">
-                <span>其它登录方式</span>
+                <span>วิธีการเข้าสู่ระบบอื่น ๆ</span>
               </div>
               <div class="flex-initial mx-2">
                 <a href="javascript:">
@@ -74,7 +74,7 @@
                 </a>
               </div>
               <div class="flex-initial" style="margin-left: auto">
-                <a href="javascript:">注册账号</a>
+                <a href="javascript:">ลงทะเบียนบัญชี</a>
               </div>
             </div>
           </n-form-item>
@@ -111,8 +111,8 @@
   });
 
   const rules = {
-    username: { required: true, message: '请输入用户名', trigger: 'blur' },
-    password: { required: true, message: '请输入密码', trigger: 'blur' },
+    username: { required: true, message: 'กรุณาใส่ชื่อผู้ใช้', trigger: 'blur' },
+    password: { required: true, message: 'กรุณาใส่รหัสผ่าน', trigger: 'blur' },
   };
 
   const userStore = useUserStore();
@@ -125,7 +125,7 @@
     formRef.value.validate(async (errors) => {
       if (!errors) {
         const { username, password } = formInline;
-        message.loading('登录中...');
+        message.loading('เข้าสู่ระบบ...');
         loading.value = true;
 
         const params: FormState = {
@@ -138,18 +138,18 @@
           message.destroyAll();
           if (code == ResultEnum.SUCCESS) {
             const toPath = decodeURIComponent((route.query?.redirect || '/') as string);
-            message.success('登录成功，即将进入系统');
+            message.success('ล็อกอินสำเร็จกำลังจะเข้าระบบ');
             if (route.name === LOGIN_NAME) {
               router.replace('/');
             } else router.replace(toPath);
           } else {
-            message.info(msg || '登录失败');
+            message.info(msg || 'การเข้าสู่ระบบล้มเหลว');
           }
         } finally {
           loading.value = false;
         }
       } else {
-        message.error('请填写完整信息，并且进行验证码校验');
+        message.error('กรุณากรอกข้อมูลให้ครบถ้วนและตรวจสอบรหัสยืนยัน');
       }
     });
   };
