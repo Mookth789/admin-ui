@@ -62,7 +62,7 @@
               <div class="flex-initial mx-2">
                 <a href="javascript:">
                   <n-icon size="24" color="#2d8cf0">
-                    <LogoGithub />
+                    <LogoLine />
                   </n-icon>
                 </a>
               </div>
@@ -90,7 +90,8 @@
   import { useUserStore } from '@/store/modules/user';
   import { useMessage } from 'naive-ui';
   import { ResultEnum } from '@/enums/httpEnum';
-  import { PersonOutline, LockClosedOutline, LogoGithub, LogoFacebook } from '@vicons/ionicons5';
+  import { PersonOutline, LockClosedOutline, LogoFacebook } from 'assets/facebook.png';
+  import { PersonOutline, LockClosedOutline, LogoLine } from 'assets/line.png';
   import { PageEnum } from '@/enums/pageEnum';
   import { websiteConfig } from '@/config/website.config';
   interface FormState {
