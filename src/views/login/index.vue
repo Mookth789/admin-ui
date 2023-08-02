@@ -30,7 +30,7 @@
               v-model:value="formInline.password"
               type="password"
               showPasswordOn="click"
-              placeholder="请输入密码"
+              placeholder="กรุณาใส่รหัสผ่าน"
             >
               <template #prefix>
                 <n-icon size="18" color="#808695">
