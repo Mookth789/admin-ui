@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/list/basic-list',
     component: Layout,
     meta: {
-      title: '列表页面',
+      title: 'หน้ารายการ',
       icon: renderIcon(TableOutlined),
       sort: 2,
     },
@@ -30,7 +30,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'basic-list',
         name: 'basic-list',
         meta: {
-          title: '基础列表',
+          title: 'รายการฐาน',
         },
         component: () => import('@/views/list/basicList/index.vue'),
       },
