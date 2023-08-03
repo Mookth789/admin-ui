@@ -96,13 +96,13 @@
       </n-grid-item>
       <n-grid-item>
         <NCard
-          title="订单量"
+          title="ปริมาณการสั่งซื้อ"
           :segmented="{ content: true, footer: true }"
           size="small"
           :bordered="false"
         >
           <template #header-extra>
-            <n-tag type="warning">周</n-tag>
+            <n-tag type="warning">สัปดาห์</n-tag>
           </template>
           <div class="py-1 px-1 flex justify-between">
             <n-skeleton v-if="loading" :width="100" size="medium" />
