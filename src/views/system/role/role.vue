@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="n-layout-page-header">
-      <n-card :bordered="false" title="角色权限管理">
-        页面数据为 Mock 示例数据，非真实数据。
+      <n-card :bordered="false" title="การจัดการสิทธิ์ตามบทบาท">
+        ข้อมูลเพจเป็นข้อมูลตัวอย่างจำลอง ไม่ใช่ข้อมูลจริง
       </n-card>
     </div>
     <n-card :bordered="false" class="mt-4 proCard">
@@ -21,7 +21,7 @@
                 <PlusOutlined />
               </n-icon>
             </template>
-            添加角色
+            เพิ่มบทบาท
           </n-button>
         </template>
 
