@@ -195,7 +195,7 @@
 
   @media (min-width: 768px) {
     .view-account {
-      background-image: url('../../assets/images/letter-m (1).png');
+      background-image: url('../../assets/images/login.svg');
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: 100%;
