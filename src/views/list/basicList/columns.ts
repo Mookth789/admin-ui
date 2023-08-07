@@ -17,12 +17,12 @@ export const columns: BasicColumn<ListData>[] = [
     width: 100,
   },
   {
-    title: '名称',
+    title: 'ชื่อ',
     key: 'name',
     width: 100,
   },
   {
-    title: '头像',
+    title: 'สัญลักษณ์',
     key: 'avatar',
     width: 100,
     render(row) {
@@ -33,7 +33,7 @@ export const columns: BasicColumn<ListData>[] = [
     },
   },
   {
-    title: '地址',
+    title: 'ที่อยู่',
     key: 'address',
     auth: ['basic_list'], // 同时根据权限控制是否显示
     ifShow: (_column) => {
@@ -42,17 +42,17 @@ export const columns: BasicColumn<ListData>[] = [
     width: 150,
   },
   {
-    title: '开始日期',
+    title: 'วันที่เริ่มต้น',
     key: 'beginTime',
     width: 160,
   },
   {
-    title: '结束日期',
+    title: 'วันที่สิ้นสุด',
     key: 'endTime',
     width: 160,
   },
   {
-    title: '创建时间',
+    title: 'เวลาในการสร้าง',
     key: 'date',
     width: 100,
   },
