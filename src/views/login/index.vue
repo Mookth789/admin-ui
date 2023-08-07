@@ -6,7 +6,7 @@
         <div class="view-account-top-logo">
           <img :src="websiteConfig.loginImage" alt="" />
         </div>
-        <div class="view-account-top-desc">{{ websiteConfig.loginDesc }}</div>
+        
       </div>
       <div class="view-account-form">
         <n-form
