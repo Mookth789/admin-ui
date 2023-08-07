@@ -1,7 +1,7 @@
 import { http } from '@/utils/http/axios';
 
 /**
- * @description: 根据用户id获取用户菜单
+ * @description: รับเมนูผู้ใช้ตามรหัสผู้ใช้
  */
 export function adminMenus() {
   return http.request({
